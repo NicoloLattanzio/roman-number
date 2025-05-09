@@ -9,7 +9,9 @@
     <property name="max" value="120"/>
   </module>
   <module name="FileTabCharacter"/>
-
+  <module name="RegexpHeader">
+    <property name="headerFile" value="LICENSE.txt"/>
+  </module>
   <module name="TreeWalker">
     <module name="BooleanExpressionComplexity"/>
     <module name="CyclomaticComplexity"/>
@@ -18,8 +20,5 @@
     <module name="AvoidStarImport"/>
     <module name="IllegalImport"/>
     <module name="NeedBraces"/>
-    <module name="RegexpHeader">
-      <property name="headerFile" value="LICENSE.txt"/>
-    </module>
   </module>
 </module>
