@@ -6,14 +6,14 @@ package it.unipd.mtss;
 
 public class IntegerToRoman {
     public static String convert(int number) {
-        if (number <= 0 || number > 3) {
-            throw new IllegalArgumentException("Numero fuori dal range [1,3]");
+        if (number <= 0 || number > 10) {
+            throw new IllegalArgumentException("Numero fuori dal range [1,10]");
         }
 
-        StringBuilder result = new StringBuilder();
-        for (int i = 0; i < number; i++) {
-            result.append("I");
-        }
-        return result.toString();
+        String[] romanNumerals = {
+            "", "I", "II", "III", "IV", "V", 
+            "VI", "VII", "VIII", "IX", "X"
+        };
+        return romanNumerals[number];
     }
 }
