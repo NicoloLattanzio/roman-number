@@ -22,6 +22,11 @@ public class IntegerToRomanTest {
     void convertShouldReturnXWhenNumberIs10() {
         assertEquals("X", IntegerToRoman.convert(10));
     }
+    
+    @Test  // Per Papa Leone XIV
+    void convertShouldReturnXIVWhenNumberIs14() {
+    assertEquals("XIV", IntegerToRoman.convert(14));
+    }
 
     @Test
     void convertShouldReturnIVWhenNumberIs4() {
@@ -31,6 +36,30 @@ public class IntegerToRomanTest {
     @Test
     void convertShouldReturnIXWhenNumberIs9() {
         assertEquals("IX", IntegerToRoman.convert(9));
+    }
+    @Test
+    void convertShouldReturnLWhenNumberIs50() {
+        assertEquals("L", IntegerToRoman.convert(50));
+    }
+
+    @Test
+    void convertShouldReturnCWhenNumberIs100() {
+        assertEquals("C", IntegerToRoman.convert(100));
+    }
+
+    @Test
+    void convertShouldReturnXLWhenNumberIs40() {
+        assertEquals("XL", IntegerToRoman.convert(40));
+    }
+
+    @Test
+    void convertShouldReturnXCWhenNumberIs90() {
+        assertEquals("XC", IntegerToRoman.convert(90));
+    }
+
+    @Test
+    void convertShouldReturnLXWhenNumberIs60() {
+        assertEquals("LX", IntegerToRoman.convert(60));
     }
 
     @Test
@@ -45,6 +74,7 @@ public class IntegerToRomanTest {
 
     @Test
     void convertShouldThrowExceptionWhenNumberIsAbove10() {
-        assertThrows(IllegalArgumentException.class, () -> IntegerToRoman.convert(11));
+        assertThrows(IllegalArgumentException.class, () -> IntegerToRoman.convert(101));
     }
+    
 }

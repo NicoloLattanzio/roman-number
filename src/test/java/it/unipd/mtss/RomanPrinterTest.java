@@ -32,6 +32,18 @@ public class RomanPrinterTest {
         assertEquals(expected, RomanPrinter.print(5));
     }
 
+    @Test // Per Papa Leone XIV
+    public void testPrintXIV() {
+    String expected = 
+        "__   __ _____ __      __\n" +
+        "\\ \\ / /|_   _|\\ \\    / /\n" +
+        " \\ V /   | |   \\ \\  / / \n" +
+        "  > <    | |    \\ \\/ /  \n" +
+        " / . \\  _| |_    \\  /   \n" +
+        "/_/ \\_\\|_____|    \\/    \n";
+    assertEquals(expected, RomanPrinter.print(14));
+}
+
     @Test
     public void testPrintX() {
         String expected = 
@@ -67,6 +79,53 @@ public class RomanPrinterTest {
             "|_____|/_/ \\_\\\n";
         assertEquals(expected, RomanPrinter.print(9));
     }
+    @Test
+public void testPrintL() {
+    String expected = 
+        " _      \n" +
+        "| |     \n" +
+        "| |     \n" +
+        "| |     \n" +
+        "| |____ \n" +
+        "|______|\n";
+    assertEquals(expected, RomanPrinter.print(50));
+}
+
+@Test
+public void testPrintC() {
+    String expected = 
+        "  _____ \n" +
+        " / ____|\n" +
+        "| |     \n" +
+        "| |     \n" +
+        "| |____ \n" +
+        " \\_____|\n";
+    assertEquals(expected, RomanPrinter.print(100));
+}
+
+@Test
+public void testPrintXL() {
+    String expected = 
+        "__   __ _      \n" +
+        "\\ \\ / /| |     \n" +
+        " \\ V / | |     \n" +
+        "  > <  | |     \n" +
+        " / . \\ | |____ \n" +
+        "/_/ \\_\\|______|\n";
+    assertEquals(expected, RomanPrinter.print(40));
+}
+
+@Test
+public void testPrintXC() {
+    String expected = 
+        "__   __  _____ \n" +
+        "\\ \\ / / / ____|\n" +
+        " \\ V / | |     \n" +
+        "  > <  | |     \n" +
+        " / . \\ | |____ \n" +
+        "/_/ \\_\\ \\_____|\n";
+    assertEquals(expected, RomanPrinter.print(90));
+}
 
     @Test
     public void testPrintEmptyForZero() {
@@ -80,6 +139,6 @@ public class RomanPrinterTest {
 
     @Test
     public void testPrintEmptyForAbove10() {
-        assertEquals("", RomanPrinter.print(11));
+        assertEquals("", RomanPrinter.print(101));
     }
 }
