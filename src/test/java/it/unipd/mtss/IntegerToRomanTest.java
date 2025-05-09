@@ -22,8 +22,8 @@ public class IntegerToRomanTest {
     void convertShouldReturnXWhenNumberIs10() {
         assertEquals("X", IntegerToRoman.convert(10));
     }
-    
-    @Test  // Per Papa Leone XIV
+
+    @Test // Per Papa Leone XIV
     void convertShouldReturnXIVWhenNumberIs14() {
     assertEquals("XIV", IntegerToRoman.convert(14));
     }
@@ -61,7 +61,40 @@ public class IntegerToRomanTest {
     void convertShouldReturnLXWhenNumberIs60() {
         assertEquals("LX", IntegerToRoman.convert(60));
     }
+    @Test
+    void convertShouldReturnDWhenNumberIs500() {
+        assertEquals("D", IntegerToRoman.convert(500));
+    }
 
+    @Test
+    void convertShouldReturnMWhenNumberIs1000() {
+        assertEquals("M", IntegerToRoman.convert(1000));
+    }
+
+    @Test
+    void convertShouldReturnCDWhenNumberIs400() {
+        assertEquals("CD", IntegerToRoman.convert(400));
+    }
+
+    @Test
+    void convertShouldReturnCMWhenNumberIs900() {
+        assertEquals("CM", IntegerToRoman.convert(900));
+    }
+
+    @Test
+    void convertShouldReturnCXLWhenNumberIs140() {
+        assertEquals("CXL", IntegerToRoman.convert(140));
+    }
+
+    @Test
+    void convertShouldReturnCXLWhenNumberIs967() {
+        assertEquals("CMLXVII", IntegerToRoman.convert(967));
+    }
+
+    @Test
+    void convertShouldThrowExceptionWhenNumberIsAbove1000() {
+        assertThrows(IllegalArgumentException.class, () -> IntegerToRoman.convert(1001));
+    }
     @Test
     void convertShouldThrowExceptionWhenNumberIsZero() {
         assertThrows(IllegalArgumentException.class, () -> IntegerToRoman.convert(0));
@@ -70,11 +103,6 @@ public class IntegerToRomanTest {
     @Test
     void convertShouldThrowExceptionWhenNumberIsNegative() {
         assertThrows(IllegalArgumentException.class, () -> IntegerToRoman.convert(-1));
-    }
-
-    @Test
-    void convertShouldThrowExceptionWhenNumberIsAbove10() {
-        assertThrows(IllegalArgumentException.class, () -> IntegerToRoman.convert(101));
     }
     
 }
