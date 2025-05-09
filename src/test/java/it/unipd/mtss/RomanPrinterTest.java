@@ -21,27 +21,51 @@ public class RomanPrinterTest {
     }
 
     @Test
-    public void testPrintII() {
+    public void testPrintV() {
         String expected = 
-            " _____   _____ \n" +
-            "|_   _| |_   _|\n" +
-            "  | |     | |  \n" +
-            "  | |     | |  \n" +
-            " _| |_   _| |_ \n" +
-            "|_____| |_____|\n";
-        assertEquals(expected, RomanPrinter.print(2));
+            "__      __\n" +
+            "\\ \\    / /\n" +
+            " \\ \\  / / \n" +
+            "  \\ \\/ /  \n" +
+            "   \\  /   \n" +
+            "    \\/    \n";
+        assertEquals(expected, RomanPrinter.print(5));
     }
 
     @Test
-    public void testPrintIII() {
+    public void testPrintX() {
         String expected = 
-            " _____   _____   _____ \n" +
-            "|_   _| |_   _| |_   _|\n" +
-            "  | |     | |     | |  \n" +
-            "  | |     | |     | |  \n" +
-            " _| |_   _| |_   _| |_ \n" +
-            "|_____| |_____| |_____|\n";
-        assertEquals(expected, RomanPrinter.print(3));
+            "__   __\n" +
+            "\\ \\ / /\n" +
+            " \\ V / \n" +
+            "  > <  \n" +
+            " / . \\ \n" +
+            "/_/ \\_\\\n";
+        assertEquals(expected, RomanPrinter.print(10));
+    }
+
+    @Test
+    public void testPrintIV() {
+        String expected = 
+            " _____ __      __\n" +
+            "|_   _|\\ \\    / /\n" +
+            "  | |   \\ \\  / / \n" +
+            "  | |    \\ \\/ /  \n" +
+            " _| |_    \\  /   \n" +
+            "|_____|    \\/    \n";
+        assertEquals(expected, RomanPrinter.print(4));
+    }
+
+    @Test
+    public void testPrintIX() {
+        String expected = 
+            " _____ __   __\n" +
+            "|_   _|\\ \\ / /\n" +
+            "  | |   \\ V / \n" +
+            "  | |    > <  \n" +
+            " _| |_  / . \\ \n" +
+            "|_____|/_/ \\_\\\n";
+        assertEquals(expected, RomanPrinter.print(9));
     }
 
     @Test
@@ -55,7 +79,7 @@ public class RomanPrinterTest {
     }
 
     @Test
-    public void testPrintEmptyForAbove3() {
-        assertEquals("", RomanPrinter.print(4));
+    public void testPrintEmptyForAbove10() {
+        assertEquals("", RomanPrinter.print(11));
     }
 }

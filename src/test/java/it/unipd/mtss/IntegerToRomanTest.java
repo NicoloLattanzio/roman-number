@@ -14,13 +14,23 @@ public class IntegerToRomanTest {
     }
 
     @Test
-    void convertShouldReturnIIWhenNumberIs2() {
-        assertEquals("II", IntegerToRoman.convert(2));
+    void convertShouldReturnVWhenNumberIs5() {
+        assertEquals("V", IntegerToRoman.convert(5));
     }
 
     @Test
-    void convertShouldReturnIIIWhenNumberIs3() {
-        assertEquals("III", IntegerToRoman.convert(3));
+    void convertShouldReturnXWhenNumberIs10() {
+        assertEquals("X", IntegerToRoman.convert(10));
+    }
+
+    @Test
+    void convertShouldReturnIVWhenNumberIs4() {
+        assertEquals("IV", IntegerToRoman.convert(4));
+    }
+
+    @Test
+    void convertShouldReturnIXWhenNumberIs9() {
+        assertEquals("IX", IntegerToRoman.convert(9));
     }
 
     @Test
@@ -34,7 +44,7 @@ public class IntegerToRomanTest {
     }
 
     @Test
-    void convertShouldThrowExceptionWhenNumberIsAbove3() {
-        assertThrows(IllegalArgumentException.class, () -> IntegerToRoman.convert(4));
+    void convertShouldThrowExceptionWhenNumberIsAbove10() {
+        assertThrows(IllegalArgumentException.class, () -> IntegerToRoman.convert(11));
     }
 }
